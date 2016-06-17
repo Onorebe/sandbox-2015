@@ -1,0 +1,383 @@
+// homework.cpp : Defines the entry point for the console application.
+//
+
+
+#include "stdafx.h"
+#include <iostream>
+#include <math.h> // cos, sqrt
+#include <string> // массив строк
+#include <fstream> // для создания файла
+using namespace std;
+
+int main()
+{
+	//1. Арифметические операции и типы данных
+	//1.1.
+	/*
+	float a;
+	setlocale (LC_ALL, "Russian");
+	cout << "Введите число "<< endl;
+	cin >> a;
+	cout << "Ваше число в квадрате = " << a*a << endl;
+	system ("pause");
+	return 0;
+	*/
+	//1.2.
+	/*
+	float a;
+	setlocale (LC_ALL, "Russian");
+	cout << "Введите длину радиуса окружности "<< endl;
+	cin >> a;
+	cout << "Площадь круга = " << 3.14*a*a << endl;
+	system ("pause");
+	return 0;
+	*/
+	//1.3.
+	/*
+	float a,b,c;
+	setlocale (LC_ALL, "Russian");
+	cout << "Введите длину стороны треугольника AB "<< endl;
+	cin >> a;
+	cout << "Введите длину стороны треугольника AC "<< endl;
+	cin >> b;
+	cout << "Введите величину угла BAC (в градусах) "<< endl;
+	cin >> c;
+	cout << "Величина стороны треугольника BC = " << sqrt(a*a+b*b-2*b*a*cos(3.1415926*c/180)) << endl;
+	system ("pause");
+	return 0;
+	*/
+	//1.4
+	/*
+	float a,b,c;
+	setlocale (LC_ALL, "Russian");
+	cout << "Введите длину стороны треугольника AB "<< endl;
+	cin >> a;
+	cout << "Введите длину стороны треугольника AC "<< endl;
+	cin >> b;
+	cout << "Введите длину стороны треугольника CB  "<< endl;
+	cin >> c;
+	cout << "Величина угла ACB (в градусах) = " << 180/3.1415926*acos((b*b + c*c - a*a)/(2*b*c)) << endl;
+	system ("pause");
+	return 0;
+	*/
+	//1.5.
+	/*
+	float a,b,c,p;
+	setlocale (LC_ALL, "Russian");
+	cout << "Введите длину стороны треугольника AB "<< endl;
+	cin >> a;
+	cout << "Введите длину стороны треугольника AC "<< endl;
+	cin >> b;
+	cout << "Введите длину стороны треугольника CB  "<< endl;
+	cin >> c;
+	p = (a+b+c)/2;
+	cout << "Площадь треугольника = " << sqrt(p*(p-a)*(p-b)*(p-c)) << endl;
+	system ("pause");
+	return 0;
+	*/
+	//1.6.
+	/*
+	float a,b;
+	setlocale (LC_ALL, "Russian");
+	cout << "Ваш начальный вклад под 3% составляет "<< endl;
+	cin >> a;
+	cout << "Через "<< (1000000 - a)/(a*0.03) << " лет сумма Вашего вклада превысит миллион рублей" << endl;
+	system ("pause");
+	return 0;
+	*/
+	//1.7.
+	/*
+	int a;
+	int b,c;
+	std::string napravlenie[4] = {"север","запад","юг","восток"};
+	setlocale (LC_ALL, "Russian");
+
+	cout << "Введите Ваше направление (0 - север, 1 - запад, 2 - юг, 3 - восток) "<< endl;
+	cin >> a;
+	b= a+1;
+	c = a-1;
+	if (b ==4) b =0;
+	if (c ==-1) c = 3;
+	cout << "После поворота на 90 градусов против часовой стрелки Ваше направление: " << napravlenie[b]<< endl;
+	cout << "После поворота на 90 градусов по часовой стрелки Ваше направление: " << napravlenie[c] << endl;
+
+	system ("pause");
+	return 0;
+	*/
+	//2. Условия if, if - else
+	//2.1.
+	/*
+	float a,b,c,d;
+	setlocale (LC_ALL, "Russian");
+	cout << "Введите длину стороны треугольника AB "<< endl;
+	cin >> a;
+	cout << "Введите длину стороны треугольника AC "<< endl;
+	cin >> b;
+	cout << "Введите длину стороны треугольника CB  "<< endl;
+	cin >> c;
+	d = fabs(180/3.1415926*acos((b*b + c*c - a*a)/(2*b*c)));
+	if (d < 180)
+	cout << "Можно создать треугольник (Да)" << endl;
+	else
+	cout << "Нельзя создать треугольник (Нет)" << endl;
+	system ("pause");
+	return 0;
+	*/
+	//2.2 
+	/*
+	float a,b,c;
+	setlocale (LC_ALL, "Russian");
+	cout << "Введите первое число "<< endl;
+	cin >> a;
+	cout << "Введите второе число "<< endl;
+	cin >> b;
+	cout << "Введите третье число "<< endl;
+	cin >> c;
+	if (a>b) a = b;
+	if (a>c) a = c;
+	cout << "Наименьшее число = " << a << endl;
+	system ("pause");
+	return 0;
+	*/
+	//2.3
+	/*
+	int a;
+	setlocale(LC_ALL, "Russian");
+	cout << "Введите число от 1 до 26" << endl;
+	cin >> a;
+	a = a + 64;
+	cout << "Ваша буква " << char(a) << endl;
+	system("pause");
+	return 0;
+	*/
+	//2.4
+	/*
+	int a;
+	setlocale(LC_ALL, "Russian");
+	cout << "Введите ваши баллы" << endl;
+	cin >> a;
+	a = 10 - a/10 + 64;
+	cout << "Ваша оценка " << char(a) << endl;
+	system("pause");
+	return 0;
+	*/
+	//2.5
+	/*
+	float a,b;
+	setlocale(LC_ALL, "Russian");
+	cout << "Введите сумму двух чисел" << endl;
+	cin >> a;
+	cout << "Введите произведение двух чисел" << endl;
+	cin >> b;
+	cout << "Первая пара ваших чисел " << (a + sqrt(a*a - 4 * b)) / 2 << " и " << (a- sqrt(a*a - 4 * b)) / 2 << endl;
+	system("pause");
+	return 0;
+	*/
+	//2.6
+	/*
+	float a;
+	setlocale(LC_ALL, "Russian");
+	cout << "Введите число а " << endl;
+	cin >> a;
+	cout << "Решение уровнения x*x + 3*x + 2 = a следующие корни " << (-3 + sqrt(9 - 4 * (2-a))) / 2 << " и " << (-3 - sqrt(9 - 4 * (2 - a))) / 2 << endl;
+	system("pause");
+	return 0;
+	*/
+	//2.7
+	/*
+	int a,b;
+	setlocale(LC_ALL, "Russian");
+	cout << "Часы работы магазина – с 9.00 до 18.00, перерыв на обед – с 13.30 до 14.30. \n Введите сколько сейчас часов " << endl;
+	cin >> a;
+	cout << "Введите сколько сейчас минут " << endl;
+	cin >> b;
+	if ((a*60+b>540 && a * 60 + b<810) || (a * 60 + b < 1080 && a * 60 + b>870))
+	cout << "Открыто" << endl;
+	else cout << "Закрыто" << endl;
+	system("pause");
+	return 0;
+	*/
+	//Задачи 2
+	//3.1
+	/*
+	int a[10], b;
+	setlocale(LC_ALL, "Russian");
+	cout << "введите десять целых чисел"<< endl;
+	for (int i = 0; i < 10; i++)
+	{
+		cin >> a[i];
+	}
+	b = a[0];
+	for (int i = 0; i < 10; i++)
+	{
+		if (a[i] > b) b = a[i];
+	}
+	cout << "Наибольшее число " <<b << endl;
+	system("pause");
+	return 0;
+	*/
+	//3.2
+	/*
+	int a;
+	setlocale(LC_ALL, "Russian");
+	cout << "введите порядковый номер числа Фибоначчи " << endl;
+	cin >> a;
+	cout << "Число Фибоначии " << round(pow(((1+sqrt(5))/2),a) /sqrt(5) +0.5) << endl;
+	system("pause");
+	return 0;
+	*/
+	//3.3
+	/*
+	float a[20], b;
+	setlocale(LC_ALL, "Russian");
+	cout << "введите двадцать вещественных чисел" << endl;
+	for (int i = 0; i < 20; i++)
+	{
+		cin >> a[i];
+	}
+	b = a[0];
+	for (int i = 0; i < 20; i++)
+	{
+		if (a[i]< b) b = a[i];
+	}
+	cout << "Наименьшее число " << b << endl;
+	system("pause");
+	return 0;
+	*/
+	//3.4
+	/*
+	int a, b, c;
+	setlocale(LC_ALL, "Russian");
+	cout << "введите число" << endl;
+	cin >> a;
+	c = a;
+	b = 0;
+	while (a >= 1)
+	{
+		a = a / pow(10,b);
+		b++;
+	}
+	b = b + 1;
+	for (int i = 0; i < b+1; i++)
+	{
+		int d = pow(10, b - i);
+		cout << c /d << " " ;
+		c = c% d;
+	}
+	system("pause");
+	return 0;
+	*/
+	//3.5
+	/*
+	int a, b, c, d;
+	setlocale(LC_ALL, "Russian");
+	cout << "введите координаты первой точки" << endl;
+	cin >> a;
+	cin >> b;
+	cout << "введите координаты второй точки" << endl;
+	cin >> c;
+	cin >> d;
+	cout << "Расстояние между точками " <<sqrt((a-c)*(a-c) + (b-d)*(b-d))<< endl;
+	system("pause");
+	return 0;
+	*/
+	//3.6
+	/*
+	int a, b, c;
+	setlocale(LC_ALL, "Russian");
+	cout << "Сколько часов" << endl;
+	cin >> a;
+	cout << "Сколько минут" << endl;
+	cin >> b;
+	cout << "Сколько секунд" << endl;
+	cin >> c;
+	cout << "До полуночи осталось " << 86400 - a*3600 - b*60 - c << " секунд" << endl;
+	system("pause");
+	return 0;
+	*/
+	//3.7
+	/*
+	float a, b, c, p;
+	setlocale(LC_ALL, "Russian");
+	cout << "Введите длину стороны треугольника AB " << endl;
+	cin >> a;
+	cout << "Введите длину стороны треугольника AC " << endl;
+	cin >> b;
+	cout << "Введите длину стороны треугольника CB  " << endl;
+	cin >> c;
+	p = (a + b + c) / 2;
+	cout << "Площадь треугольника = " << sqrt(p*(p - a)*(p - b)*(p - c)) << endl;
+	system("pause");
+	return 0;
+	*/
+	//3.8
+	/*
+	int a;
+	setlocale(LC_ALL, "Russian");
+	cout << "Введите положительное целое число " << endl;
+	cin >> a;
+	cout << "Делители данного числа " << endl;
+	for (int i=1; i<a+1; i++)
+		if (a%i==0) cout << i << " ";
+	system("pause");
+	return 0;
+	*/
+	//3.9
+	/*
+	setlocale(LC_ALL, "Russian");
+	if (!std::ifstream("C:\\1\\gb.txt")) // предварительно нужно создать папку "1" на диске С
+	{
+		cout << "Hello" << endl;
+		ofstream ofs("C:\\1\\gb.txt");
+		ofs << "Проверка";
+		ofs.close();
+	}
+	else cout << "Goodbye" << endl;
+	system("pause");
+	return 0;
+	*/
+	//3.10
+	/*
+	double a;
+	setlocale(LC_ALL, "Russian");
+	cout << "Введите число " << endl;
+	cin >> a;
+	cout << "Квадрат числа " << a*a << endl;
+	cout << "Куб числа " << a*a*a << endl;
+	cout << "Четвертая степень числа " << a*a*a*a << endl;
+	system("pause");
+	return 0;
+	*/
+	//3.11
+	/*
+	float a,b,c;
+	setlocale(LC_ALL, "Russian");
+	cout << "Введите длины ребер " << endl;
+	cin >> a;
+	cin >> b;
+	cin >> c;
+	cout << "Суммарная длина ребер " << 4* (a+b+c) << endl;
+	cout << "Полная площадь поверхностей " << 2* (a*b+a*c +c*b) << endl;
+	cout << "Объем " << a*b*c << endl;
+	system("pause");
+	return 0;
+	*/
+	//3.12
+	/*
+	int a[10], b;
+	setlocale(LC_ALL, "Russian");
+	cout << "введите десять целых чисел" << endl;
+	for (int i = 0; i < 10; i++)
+	{
+		cin >> a[i];
+	}
+	b = a[0];
+	for (int i = 0; i < 10; i++)
+	{
+		if (a[i] > b) b = a[i];
+	}
+	cout << "Наибольшее число " << b << endl;
+	system("pause");
+	return 0;
+	*/
+}
